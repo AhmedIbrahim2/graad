@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/login.dart';
 import 'package:flutter_application_1/signup.dart';
 import 'package:flutter_application_1/welcome.dart';
+import 'package:flutter_application_1/widgets/navbar_roots.dart';
+
+import 'settings.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,12 +26,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/",
-      routes: {
-        "/": (context) => const Welcome(),
-        "/login": (context) => const Login(),
-        "/signup": (context) => const Signup(),
-      },
+      debugShowCheckedModeBanner: false,
+      home: Welcome(),
     );
   }
 }

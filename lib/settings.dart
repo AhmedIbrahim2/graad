@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/login.dart';
+import 'package:flutter_application_1/profile/about_us.dart';
 import 'package:flutter_application_1/profile/profile.dart';
 
 class Settings extends StatefulWidget {
@@ -121,55 +123,12 @@ class _SettingsState extends State<Settings> {
             ),
             SizedBox(height: 20),
             ListTile(
-              onTap: () {},
-              leading: Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.indigo.shade100,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.privacy_tip_outlined,
-                  color: Colors.indigo,
-                  size: 35,
-                ),
-              ),
-              title: Text(
-                "Privacy",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                ),
-              ),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
-            ),
-            SizedBox(height: 20),
-            ListTile(
-              onTap: () {},
-              leading: Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.green.shade100,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.settings_suggest_outlined,
-                  color: Colors.green,
-                  size: 35,
-                ),
-              ),
-              title: Text(
-                "General",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                ),
-              ),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
-            ),
-            SizedBox(height: 20),
-            ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => AboutUs()),
+                );
+              },
               leading: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -193,7 +152,38 @@ class _SettingsState extends State<Settings> {
             ),
             Divider(height: 40),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text('Logout'),
+                      content: Text('Are you sure you want to logout?'),
+                      actions: [
+                        TextButton(
+                          child: Text('Cancel'),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                        TextButton(
+                          child: Text('Logout'),
+                          onPressed: () async {
+                            Navigator.of(context).pop();
+                            await FirebaseAuth.instance.signOut().then((value) {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Login()),
+                              );
+                            });
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
               leading: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(

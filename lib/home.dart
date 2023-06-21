@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                 Text(
                   "Hello $userName",
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 25,
                     fontWeight: FontWeight.w500,
                   ),
                 ),

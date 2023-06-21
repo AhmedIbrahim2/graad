@@ -2,31 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/upcoming_schedual.dart';
 
 class Schedule extends StatefulWidget {
-  const Schedule({super.key});
+  const Schedule({Key? key}) : super(key: key);
 
   @override
-  State<Schedule> createState() => _ScheduleState();
+  _ScheduleState createState() => _ScheduleState();
 }
 
 class _ScheduleState extends State<Schedule> {
   int _buttonIndex = 0;
-  final __scheduleWidgets = [
-    //Upcoming Widget
+  final List<Widget> _scheduleWidgets = [
+    // Upcoming Widget
     UpcomingSchedual(),
-    //Competed Widget
+    // Completed Widget
     Container(),
-    //Canceled Widget
-
+    // Canceled Widget
     Container(),
-
-    
   ];
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(top: 40),
+    return Padding(
+      padding: EdgeInsets.only(top: 40),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -59,19 +56,20 @@ class _ScheduleState extends State<Schedule> {
                     },
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                          EdgeInsets.symmetric(vertical: 19, horizontal: 15),
                       decoration: BoxDecoration(
-                        color:_buttonIndex == 0? Color(0xFF7165D6): Colors.transparent,
+                        color: _buttonIndex == 0
+                            ? Color(0xFF7165D6)
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
-                        "Upcoimg",
+                        "Upcoming",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: _buttonIndex == 0
-                          ? Colors.white
-                         : Colors.black38
+                          color:
+                              _buttonIndex == 0 ? Colors.white : Colors.black38,
                         ),
                       ),
                     ),
@@ -84,9 +82,11 @@ class _ScheduleState extends State<Schedule> {
                     },
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                          EdgeInsets.symmetric(vertical: 19, horizontal: 20),
                       decoration: BoxDecoration(
-                        color:_buttonIndex == 1? Color(0xFF7165D6): Colors.transparent,
+                        color: _buttonIndex == 1
+                            ? Color(0xFF7165D6)
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
@@ -94,9 +94,8 @@ class _ScheduleState extends State<Schedule> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: _buttonIndex == 1
-                          ? Colors.white
-                         : Colors.black38
+                          color:
+                              _buttonIndex == 1 ? Colors.white : Colors.black38,
                         ),
                       ),
                     ),
@@ -109,10 +108,11 @@ class _ScheduleState extends State<Schedule> {
                     },
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                          EdgeInsets.symmetric(vertical: 19, horizontal: 20),
                       decoration: BoxDecoration(
-                      color:_buttonIndex == 2 ? Color(0xFF7165D6): Colors.transparent,
-
+                        color: _buttonIndex == 2
+                            ? Color(0xFF7165D6)
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
@@ -120,18 +120,17 @@ class _ScheduleState extends State<Schedule> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: _buttonIndex == 2
-                          ? Colors.white
-                         : Colors.black38),
+                          color:
+                              _buttonIndex == 2 ? Colors.white : Colors.black38,
                         ),
                       ),
                     ),
-                  
+                  ),
                 ],
               ),
             ),
             SizedBox(height: 30),
-            __scheduleWidgets[_buttonIndex],
+            _scheduleWidgets[_buttonIndex],
           ],
         ),
       ),
