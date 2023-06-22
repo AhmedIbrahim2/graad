@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_1/appointmentformat.dart';
 
-class AppointScreen extends StatelessWidget {
+class AppointScreen7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -82,7 +82,7 @@ class AppointScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Dr/Eman",
+                    "Dr/Dina",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -96,7 +96,7 @@ class AppointScreen extends StatelessWidget {
                           color: Colors.red, size: 28),
                       SizedBox(width: 5),
                       Text(
-                        "Cardiologist",
+                        "Physiotherapy",
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.black.withOpacity(0.6),
@@ -106,7 +106,7 @@ class AppointScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 18),
                   Text(
-                    "Consultant of Cardiology, Therapeutic Catheterization and Critical Cases, PhD in Cardiology, Fellow of the Royal College of England, Member of the European Heart Association and the Egyptian Heart Association, Member of the European Society of Therapeutic Catheterization.",
+                    "Dr. Dina is a highly skilled and compassionate physiotherapy doctor specializing in the treatment and rehabilitation of musculoskeletal disorders and injuries. With extensive knowledge and expertise in physiotherapy techniques, Dr. Mona is dedicated to helping patients regain their physical function and improve their quality of life. Holding a Ph.D. in Physiotherapy, she is recognized for her profound contributions to the field and her commitment to evidence-based practice. Dr. Mona is a respected Fellow of the Royal College of England and an esteemed member of the European Physiotherapy Association and the Egyptian Physiotherapy Association, actively contributing to advancements in the field of physiotherapy through research and professional collaboration. With a patient-centered approach, Dr. Mona provides individualized treatment plans tailored to each patient's unique needs, using a combination of manual therapy, therapeutic exercises, and state-of-the-art rehabilitation techniques. Her caring and empathetic nature, combined with her expertise, ensure that patients receive the highest standard of care and support on their journey to recovery.",
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black.withOpacity(0.6),
@@ -123,8 +123,8 @@ class AppointScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => AppointmentForm(
-                                nameDoctor: 'Eman',
-                                Department: 'Cardiology',
+                                nameDoctor: 'Dina',
+                                Department: 'physiotherapy',
                               ),
                             ));
                       },

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-class AppointScreen3 extends StatelessWidget{
+import 'package:flutter_application_1/appointmentformat.dart';
+
+class AppointScreen3 extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Material(
       color: Color(0xFFD9E4EE),
       child: SingleChildScrollView(
@@ -10,45 +12,41 @@ class AppointScreen3 extends StatelessWidget{
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height /2.6,
+              height: MediaQuery.of(context).size.height / 1.8,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                      "assets/images/doctor4.jpg"
-                  ),
-
+                  image: AssetImage("assets/images/doctor1.jpg"),
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
-
                 ),
               ),
               child: Container(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [
-                        Color(0xFF7165D6).withOpacity(0.9),
-                       Color(0xFF7165D6).withOpacity(0),
-                       Color(0xFF7165D6).withOpacity(0),
-                      ],
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
-                    )
-                ),
+                  colors: [
+                    Color(0xFF7165D6).withOpacity(0.9),
+                    Color(0xFF7165D6).withOpacity(0),
+                    Color(0xFF7165D6).withOpacity(0),
+                  ],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                )),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(padding: EdgeInsets.only(top: 30,left:10,right: 10 ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 30, left: 10, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
                             onTap: () {
-                               Navigator.pop(context);
-                              },
+                              Navigator.pop(context);
+                            },
                             child: Container(
                               margin: EdgeInsets.all(8),
                               height: 45,
@@ -56,7 +54,7 @@ class AppointScreen3 extends StatelessWidget{
                               decoration: BoxDecoration(
                                 color: Color(0xFFF2F8FF),
                                 borderRadius: BorderRadius.circular(10),
-                                boxShadow:[
+                                boxShadow: [
                                   BoxShadow(
                                     color: Colors.white,
                                     blurRadius: 4,
@@ -66,55 +64,16 @@ class AppointScreen3 extends StatelessWidget{
                               ),
                               child: Center(
                                 child: Icon(Icons.arrow_back,
-                                    color: Color(0xFF7165D6),size: 28),
+                                    color: Color(0xFF7165D6), size: 28),
                               ),
                             ),
                           ),
-                         
                         ],
                       ),
                     ),
-                    // SizedBox(height: 60,
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //     crossAxisAlignment: CrossAxisAlignment.end,
-                    //     children: [
-                    //       Column(
-                    //         mainAxisAlignment: MainAxisAlignment.center,
-                    //         children: [
-                    //           Column(
-                    //             mainAxisAlignment: MainAxisAlignment.center,
-                    //             children: [
-                    //               Text(
-                    //                 "Patients",
-                    //                 style: TextStyle(
-                    //                   fontSize: 20,
-                    //                   fontWeight: FontWeight.bold,
-                    //                   color: Color(0xFFD9E4EE),
-                    //                 ),
-                    //               ),
-                    //               SizedBox(height: 8),
-                    //               Text(
-                    //                 "1.8k",
-                    //                 style: TextStyle(
-                    //                   fontSize: 18,
-                    //                   fontWeight: FontWeight.w500,
-                    //                   color: Color(0xFFD9E4EE),
-                    //                 ),
-                    //               )
-
-                    //             ],
-                    //           ),
-                            
-                    //         ],
-                    //       )
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
-
             ),
             SizedBox(height: 8),
             Padding(
@@ -123,172 +82,63 @@ class AppointScreen3 extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Dr Omnia",
+                    "Dr/Amr",
                     style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w500,
-                      color:Color(0xFF7165D6),
-                    ),
-                  ),
-                  SizedBox(height:5),
-                  Row(children: [
-                    Icon(Icons.medical_information,
-                        color: Colors.red,
-                        size: 28),
-                    SizedBox(width: 5),
-                    Text(
-                      "surgon",
-                      style: TextStyle(
-                        fontSize: 17,
-                        color:Colors.black.withOpacity(0.6),
-
-                      ),
-                    )
-
-                  ],
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    "Lorem ipsum dolor sit amet,conempor incididunt ut labore et dolore magna aliqua.",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color:Colors.black.withOpacity(0.6),
-
-                    ),
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(height: 15),
-                  Text(
-                    "Book Date",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color:Colors.black.withOpacity(0.6),
-                      fontWeight: FontWeight.w600,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF7165D6),
                     ),
                   ),
                   SizedBox(height: 8),
-                  Container(
-                    height: 70,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 31,
-                      itemBuilder:(context,index){
-                        return InkWell(
-                          child: Container(
-                            margin: EdgeInsets.symmetric(horizontal: 8,vertical: 5),
-                            padding: EdgeInsets.symmetric(vertical: 8,horizontal: 25),
-                            decoration: BoxDecoration(
-                              color: index==1? Color(0xFF7165D6):Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0xFFD9E4EE),
-                                  blurRadius: 4,
-                                  spreadRadius: 2,
-
-                                ),
-                              ],
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "${index +1}",
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    color: index ==1
-                                        ?Colors.white
-                                        :Colors.black.withOpacity(0.6),
-                                  ),
-                                ),
-                                Text(
-                                  "DEC",
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: index ==1
-                                        ?Colors.white
-                                        :Colors.black.withOpacity(0.6),
-                                  ),
-                                )
-                              ],
-                            ),
-
-                          ),
-
-                        );
-                      } ,
-                    ),
+                  Row(
+                    children: [
+                      Icon(Icons.medical_information,
+                          color: Colors.red, size: 28),
+                      SizedBox(width: 5),
+                      Text(
+                        "Cardiologist",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      )
+                    ],
                   ),
-
-                  SizedBox(height: 8),
+                  SizedBox(height: 18),
                   Text(
-                    "Book Time",
+                    "Dr. Amr is a dedicated and compassionate Cardiologist who is deeply committed to improving cardiovascular health and enhancing the lives of his patients. With extensive experience and expertise in Therapeutic Catheterization and Critical Cases, Dr. Amr is widely recognized for his exceptional patient care and clinical acumen. Holding a Ph.D. in Cardiology, he has made remarkable contributions to the field and is regarded as a prominent authority. Dr. Amr is a distinguished Fellow of the Royal College of England and a respected member of the European Heart Association and the Egyptian Heart Association, actively driving advancements in cardiac care through groundbreaking research and innovative approaches. As an esteemed member of the European Society of Therapeutic Catheterization, Dr. Amr remains at the forefront of pioneering treatments and procedures, consistently pushing the boundaries of medical excellence. With a patient-centric philosophy, he strives to deliver personalized and comprehensive care, prioritizing the well-being and recovery of his patients with unwavering dedication.",
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black.withOpacity(0.6),
-                      fontWeight: FontWeight.w600,
-
                     ),
+                    textAlign: TextAlign.justify,
                   ),
-                  SizedBox(height: 10),
-                  Container(
-                    height: 70,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 24,
-                      itemBuilder:(context,index){
-                        return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 8,vertical: 5),
-                          decoration: BoxDecoration(
-                            color: index==2 ? Color(0xFF7165D6):Colors.white,
-                            borderRadius:  BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.white,
-                                blurRadius: 4,
-                                spreadRadius: 2,
-                              ),
-                            ],
-                          ),
-                          child: Center(child:Text(
-                            "${index + 1} :00 AM",
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: index ==2
-                                  ?Colors.white
-                                  :Colors.black.withOpacity(0.6),
-                            ),
-
-                          ),
-                          ),
-                        );
-
-                      },
-
-
-                    ),
-                  ),
-                  SizedBox(height: 50),
+                  SizedBox(height: 40),
                   Material(
                     color: Color(0xFF7165D6),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
-                      onTap: (){},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AppointmentForm(
+                                nameDoctor: 'Amr',
+                                Department: 'Cardiology',
+                              ),
+                            ));
+                      },
                       child: Container(
-                        height: 50,
+                        height: 60,
                         width: MediaQuery.of(context).size.width,
                         child: Center(
                           child: Text(
                             "Book Appointment",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 22,
                               fontWeight: FontWeight.bold,
                             ),
-
                           ),
                         ),
                       ),
@@ -297,11 +147,9 @@ class AppointScreen3 extends StatelessWidget{
                 ],
               ),
             ),
-
           ],
         ),
       ),
-
     );
   }
 }

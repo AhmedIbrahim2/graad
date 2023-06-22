@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_1/appointmentformat.dart';
 
-class AppointScreen extends StatelessWidget {
+class AppointScreen10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -96,7 +96,7 @@ class AppointScreen extends StatelessWidget {
                           color: Colors.red, size: 28),
                       SizedBox(width: 5),
                       Text(
-                        "Cardiologist",
+                        "Nutrition",
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.black.withOpacity(0.6),
@@ -106,7 +106,7 @@ class AppointScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 18),
                   Text(
-                    "Consultant of Cardiology, Therapeutic Catheterization and Critical Cases, PhD in Cardiology, Fellow of the Royal College of England, Member of the European Heart Association and the Egyptian Heart Association, Member of the European Society of Therapeutic Catheterization.",
+                    "Dr. Eman is a highly knowledgeable and compassionate nutrition doctor specializing in personalized dietary plans and lifestyle interventions to promote optimal health and well-being. With extensive expertise in nutrition science, Dr. Hla is dedicated to helping patients achieve their health goals and improve their overall quality of life. Holding a Ph.D. in Nutrition, she is recognized for her significant contributions to the field and her commitment to evidence-based practice. Dr. Hla is a respected Fellow of the Royal College of England and an esteemed member of the European Nutrition Society and the Egyptian Nutrition Association, actively contributing to advancements in the field of nutrition through research and education. With a patient-centered approach, Dr. Hla provides tailored nutrition plans customized to each patient's unique needs, taking into account their medical history, dietary preferences, and lifestyle. Through comprehensive consultations and ongoing support, she empowers her patients to make informed choices and adopt sustainable dietary habits. Dr. Hla's caring and empathetic nature, combined with her expertise, ensure that patients receive the highest quality care and guidance on their journey towards optimal nutrition and wellness.",
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black.withOpacity(0.6),
@@ -124,7 +124,7 @@ class AppointScreen extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (context) => AppointmentForm(
                                 nameDoctor: 'Eman',
-                                Department: 'Cardiology',
+                                Department: 'Nutrition',
                               ),
                             ));
                       },

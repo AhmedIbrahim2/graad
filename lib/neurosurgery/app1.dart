@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_1/appointmentformat.dart';
 
-class AppointScreen extends StatelessWidget {
+class AppointScreen12 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -82,7 +82,7 @@ class AppointScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Dr/Eman",
+                    "Dr/Mostafa",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -96,7 +96,7 @@ class AppointScreen extends StatelessWidget {
                           color: Colors.red, size: 28),
                       SizedBox(width: 5),
                       Text(
-                        "Cardiologist",
+                        "Neurosurgery",
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.black.withOpacity(0.6),
@@ -106,7 +106,7 @@ class AppointScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 18),
                   Text(
-                    "Consultant of Cardiology, Therapeutic Catheterization and Critical Cases, PhD in Cardiology, Fellow of the Royal College of England, Member of the European Heart Association and the Egyptian Heart Association, Member of the European Society of Therapeutic Catheterization.",
+                    "Dr. Mostafa is a highly skilled and compassionate neurosurgery doctor specializing in the diagnosis and treatment of complex neurological conditions. With a profound understanding of the intricacies of the nervous system, Dr. Mostafa is dedicated to providing exceptional care and improving the lives of his patients. Holding a Ph.D. in Neurosurgery, he is widely recognized for his significant contributions to the field and his commitment to advancing neurosurgical techniques. Dr. Mostafa is a respected Fellow of the Royal College of Surgeons and an esteemed member of the European Association of Neurosurgical Societies and the Egyptian Society of Neurosurgery, actively involved in groundbreaking research and innovative surgical approaches. With a patient-centered approach, Dr. Mostafa develops individualized treatment plans tailored to each patient's unique needs, employing state-of-the-art technology and surgical expertise. Through meticulous evaluation, precise surgical interventions, and comprehensive post-operative care, he strives to optimize outcomes and enhance his patients' quality of life. Dr. Mostafa's empathetic and compassionate demeanor, combined with his exceptional surgical skills, ensures that patients receive the highest level of care and support throughout their neurosurgical journey.",
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black.withOpacity(0.6),
@@ -123,8 +123,8 @@ class AppointScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => AppointmentForm(
-                                nameDoctor: 'Eman',
-                                Department: 'Cardiology',
+                                nameDoctor: 'Mostafa',
+                                Department: 'Neurosurgery',
                               ),
                             ));
                       },
